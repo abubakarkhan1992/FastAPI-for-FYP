@@ -1,18 +1,23 @@
+# Core API
 fastapi==0.110.0
 uvicorn==0.27.1
 python-multipart==0.0.9
-requests==2.31.0
-streamlit==1.32.0
-pandas==2.1.4
-numpy==1.26.4
-matplotlib==3.7.3
-seaborn==0.13.0
-scipy==1.11.4
-ydata-profiling==4.10.0
-streamlit-pandas-profiling==0.1.3
-fpdf2==2.7.9
-imbalanced-learn==0.12.2
-py-AutoClean==1.1.3
-openpyxl==3.1.2
-scikit-learn==1.4.2
+requests
+
+# Data Processing & AI (Letting these find compatible versions)
+pandas>=2.1.4
+numpy<2.0.0
+scikit-learn
 pycaret==3.3.0
+ydata-profiling==4.10.0
+
+# Supporting Libraries
+matplotlib
+seaborn
+scipy
+fpdf2
+imbalanced-learn
+openpyxl
+
+# Custom/Specific Libraries
+py-AutoClean @ git+https://github.com/elis-anderson/py-AutoClean.git
