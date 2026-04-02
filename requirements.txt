@@ -1,22 +1,14 @@
-# FastAPI Core
 fastapi==0.110.0
 uvicorn==0.27.1
 python-multipart==0.0.9
-
-# Heavy AI & Data (Optimized for resolution)
 pandas>=2.1.4
 numpy<2.0.0
 pycaret==3.3.0
 ydata-profiling==4.10.0
 scikit-learn>=1.4.2
 imbalanced-learn
-
-# Utilities
 fpdf2
 openpyxl
 requests
 matplotlib
 seaborn
-
-# Fix for the broken AutoClean package
-py-AutoClean @ git+https://github.com/elis-anderson/py-AutoClean.git
