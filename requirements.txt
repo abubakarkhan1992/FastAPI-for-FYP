@@ -1,9 +1,9 @@
-# Core API
+# FastAPI Core
 fastapi==0.110.0
 uvicorn==0.27.1
 python-multipart==0.0.9
 
-# Data & AI (The "Heavy" stuff)
+# Heavy AI & Data (Optimized for resolution)
 pandas>=2.1.4
 numpy<2.0.0
 pycaret==3.3.0
@@ -18,5 +18,5 @@ requests
 matplotlib
 seaborn
 
-# Critical Fix for the broken library
+# Fix for the broken AutoClean package
 py-AutoClean @ git+https://github.com/elis-anderson/py-AutoClean.git
