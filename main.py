@@ -17,7 +17,7 @@ from modules.correlation import correlation_analysis
 from modules.quality_score import compute_quality_score
 from modules.cleaning_manual import manual_clean_dataset
 #from modules.cleaning_auto import auto_clean_dataset
-#from modules.automl_training import (
+"""from modules.automl_training import (
     detect_problem_type,
     train_automl_model,
     save_model_pickle,
@@ -25,7 +25,7 @@ from modules.cleaning_manual import manual_clean_dataset
     get_model_summary,
     make_predictions,
     get_feature_columns
-)
+)"""
 
 app = FastAPI(title="Dataset Analyser API")
 
