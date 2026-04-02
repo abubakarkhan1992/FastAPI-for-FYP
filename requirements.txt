@@ -12,3 +12,6 @@ openpyxl
 requests
 matplotlib
 seaborn
+loguru        # <--- Add this
+scikit-plot   # <--- Add this
+joblib        # <--- Add this
