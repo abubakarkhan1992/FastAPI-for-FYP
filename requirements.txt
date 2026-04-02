@@ -2,22 +2,21 @@
 fastapi==0.110.0
 uvicorn==0.27.1
 python-multipart==0.0.9
-requests
 
-# Data Processing & AI (Letting these find compatible versions)
+# Data & AI (The "Heavy" stuff)
 pandas>=2.1.4
 numpy<2.0.0
-scikit-learn
 pycaret==3.3.0
 ydata-profiling==4.10.0
+scikit-learn>=1.4.2
+imbalanced-learn
 
-# Supporting Libraries
+# Utilities
+fpdf2
+openpyxl
+requests
 matplotlib
 seaborn
-scipy
-fpdf2
-imbalanced-learn
-openpyxl
 
-# Custom/Specific Libraries
+# Critical Fix for the broken library
 py-AutoClean @ git+https://github.com/elis-anderson/py-AutoClean.git
