@@ -4,7 +4,7 @@ import pandas as pd
 import io
 import json
 from pathlib import Path
-from ydata_profiling import ProfileReport
+#from ydata_profiling import ProfileReport
 from fpdf import FPDF
 
 # Import your existing pure modules
@@ -16,8 +16,8 @@ from modules.imbalance import detect_imbalance
 from modules.correlation import correlation_analysis
 from modules.quality_score import compute_quality_score
 from modules.cleaning_manual import manual_clean_dataset
-from modules.cleaning_auto import auto_clean_dataset
-from modules.automl_training import (
+#from modules.cleaning_auto import auto_clean_dataset
+#from modules.automl_training import (
     detect_problem_type,
     train_automl_model,
     save_model_pickle,
@@ -187,6 +187,7 @@ async def download_manual_report_pdf(file: UploadFile = File(...)):
 
 @app.post("/profile")
 async def profile_dataset(file: UploadFile = File(...)):
+    from ydata_profiling import ProfileReport
     """
     Automated data profiling using ydata-profiling.
     Returns profile report as HTML report status.
@@ -295,6 +296,7 @@ async def clean_manual(file: UploadFile = File(...), config: str = Form(...)):
 
 @app.post("/clean/auto")
 async def clean_auto(file: UploadFile = File(...), target_col: str = Form("None")):
+    from modules.cleaning_auto import auto_clean_dataset
     """
     Apply automated cleaning and prepare the dataset for model training.
     """
@@ -339,6 +341,14 @@ async def clean_auto(file: UploadFile = File(...), target_col: str = Form("None"
 
 @app.post("/train")
 async def train_model(file: UploadFile = File(...), target_col: str = Form(...)):
+    from modules.automl_training import (
+    detect_problem_type,
+    train_automl_model,
+    save_model_pickle,
+    load_model_pickle,
+    get_model_summary,
+    make_predictions,
+    get_feature_columns)
     """
     Train an AutoML model using PyCaret.
     Automatically detects if it's a classification or regression problem.
